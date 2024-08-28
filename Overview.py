@@ -1,1 +1,27 @@
+from manim import *
 
+class Overview(Scene):
+    def construct(self):
+        self.wait(3)
+        RNN = ImageMobject("RNN.png").scale(0.4).shift(UP*3)
+        backpack = ImageMobject("backpack.png").scale(0.4).shift(UP*3)
+        transformer = ImageMobject("transformer.png").scale(0.4).shift(UP*3)
+        intro = Group(RNN, backpack, transformer).arrange(RIGHT, buff=0.75)
+        self.play(FadeIn(intro[0]))
+        self.wait(0.75)
+        self.play(FadeIn(intro[1]))
+        self.wait(0.75)
+        self.play(FadeIn(intro[2]))
+        self.wait(1.5)
+        self.play(intro.animate.scale(0.5).shift(DOWN*2+LEFT*3.5))
+        self.wait(1)
+        label = Text("Sentiment Analysis").next_to(intro, UP)
+        pedestal_1 = Rectangle(width=label.width, height=5, fill_opacity=1, color=RED).next_to(intro, DOWN, buff=0)
+        self.play(Write(label),Write(pedestal_1))
+        self.wait(3)
+        intro_copy = intro.copy().move_to(RIGHT*3.5 + UP*2)
+        label_2 = Text("Language Modeling").next_to(intro_copy, UP)
+        pedestal_2 = Rectangle(width=label_2.width, height=6, fill_opacity=1, color=GREEN).next_to(intro_copy, DOWN, buff=0)
+        self.play(FadeIn(intro_copy),Write(label_2),Write(pedestal_2))
+        self.wait(14)
+        self.play(*[FadeOut(mob) for mob in self.mobjects])
