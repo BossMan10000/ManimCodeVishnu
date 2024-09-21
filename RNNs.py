@@ -262,7 +262,7 @@ class Hidden_State_Computations(Scene):
         
 class Example(Scene):
     def construct(self):
-        img = ImageMobject("/Users/vishypullela/Desktop/Summer_Reasearch_UMD/Manim_Activity/media/images/taco-bell-crunchwrap-feature.jpg", scale_to_resolution= 1000)
+        img = ImageMobject("source_images/burrito.webp", scale_to_resolution= 1000)
         review = Text("The food is not bad, could be better")
         self.wait(6)
         self.add(img)

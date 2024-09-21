@@ -1,9 +1,10 @@
 
 def target(filename, animation):
-    return "media/videos/%s/480p15/%s.mp4: $(PYTHON)\n\tmanim -pql %s.py $(basename $(notdir $@))\n" % (filename, animation, filename)
+    return "media/videos/%s/480p15/%s.mp4: $(IMAGES) %s.py\n\tmanim -pql %s.py $(basename $(notdir $@))\n" % (filename, filename, animation, filename)
 
 if __name__ == "__main__":
     from glob import glob
+    print("IMAGES := $(wildcard *.*)")
 
     targets = {}
 

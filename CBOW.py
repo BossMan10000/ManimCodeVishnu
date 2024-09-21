@@ -22,7 +22,7 @@ class CBoW(Scene):
     def construct(self):
         # Write sentence with arrow to computer
         sentence = Text("Sentence").shift(LEFT*3).scale(0.75)
-        computer = ImageMobject("computer.png").shift(RIGHT*3).scale(0.2)
+        computer = ImageMobject("source_images/computer.png").shift(RIGHT*3).scale(0.2)
         sentence_to_computer = Arrow(start=sentence.get_right(),end=computer.get_left(),color=PURPLE)
         self.wait(6.57)
         self.play(Write(sentence),GrowArrow(sentence_to_computer),FadeIn(computer))
@@ -233,7 +233,7 @@ class CBoW(Scene):
         # Bag of words with inverter limitation
         example_sentence[6].set_color(WHITE)
         self.play(Write(example_sentence))
-        bag = ImageMobject("bag.png").scale(0.75).shift(DOWN*1)
+        bag = ImageMobject("source_images/bag.png").scale(0.75).shift(DOWN*1)
         self.play(FadeIn(bag))
         for i in range(7):
             self.play(FadeOut(example_sentence[6-i],target_position=bag),run_time=0.3)

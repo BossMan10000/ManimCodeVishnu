@@ -3,9 +3,9 @@ from manim import *
 class Overview(Scene):
     def construct(self):
         self.wait(3)
-        RNN = ImageMobject("RNN.png").scale(0.4).shift(UP*3)
-        backpack = ImageMobject("backpack.png").scale(0.4).shift(UP*3)
-        transformer = ImageMobject("transformer.png").scale(0.4).shift(UP*3)
+        RNN = ImageMobject("source_images/RNN.png").scale(0.4).shift(UP*3)
+        backpack = ImageMobject("source_images/backpack.png").scale(0.4).shift(UP*3)
+        transformer = ImageMobject("source_images/transformer.png").scale(0.4).shift(UP*3)
         intro = Group(RNN, backpack, transformer).arrange(RIGHT, buff=0.75)
         self.play(FadeIn(intro[0]))
         self.wait(0.75)
