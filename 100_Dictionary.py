@@ -1,7 +1,7 @@
 from manim import *
 
 
-class Dictionary1(Scene):
+class 101_Sentiment(Scene):
     def construct(self):
         Title = Text("Sentiment Analysis",font_size = 68,gradient=(RED,GREEN))
         Company = Text("Travel Company" , color=BLUE, font_size=48)
@@ -30,7 +30,7 @@ class Dictionary1(Scene):
         self.clear()
         
         
-class Dictionary2(Scene):
+class 102_WordCount(Scene):
     def construct(self):
         plus_symbol = Text("+", font_size=120,color = GREEN).shift(4 * RIGHT)
         minus_symbol = Text("-", font_size=120, color = RED).shift(4 * LEFT)

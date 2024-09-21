@@ -1,7 +1,7 @@
 
 from manim import *
 
-class IntrotoRNNs(Scene):
+class 301_IntrotoRNNs(Scene):
     def construct(self):
         Title = Text("Recurrent Nueral Network or RNN", font_size= 60, color = BLUE)
         description = Text("Accounts for negated words", font_size = 40, color = GREY).next_to(Title, DOWN*2)
@@ -9,7 +9,7 @@ class IntrotoRNNs(Scene):
         self.play(Write(description))
         self.wait(33)
 
-class TokenEncoding(Scene):
+class 302_TokenEncoding(Scene):
     def construct(self):
         sentence = Text("I am not feeling bad", font_size=30,color = GREY)
         sentence1 = Text("I am not feeling bad", font_size=56,color = GREY)
@@ -71,7 +71,7 @@ class TokenEncoding(Scene):
 
         self.wait(7.5) 
 
-class HiddenStateIntuition(Scene):
+class 303_HiddenStateIntuition(Scene):
     def construct(self):
         word1 = Text('"feeling"',font_size=56,color = BLUE).shift(LEFT*4+DOWN*1)
         m0 = Matrix([[0],[0],[0]]).set_row_colors(GREEN,RED,GREY).shift(DOWN*1)
@@ -169,7 +169,7 @@ class HiddenStateIntuition(Scene):
         self.play(FadeTransform(hidnvecsimp,ht1))
         self.wait(33)
 
-class Hidden_State_Computations(Scene):
+class 304_Hidden_State_Computations(Scene):
     def construct(self):
         # Nonlinear functions, weights, biases
         self.wait(4.25)
@@ -260,7 +260,7 @@ class Hidden_State_Computations(Scene):
         self.wait(8)
 
         
-class Example(Scene):
+class 305_Example(Scene):
     def construct(self):
         img = ImageMobject("source_images/burrito.webp", scale_to_resolution= 1000)
         review = Text("The food is not bad, could be better")

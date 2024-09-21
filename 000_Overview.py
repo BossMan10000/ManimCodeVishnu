@@ -1,6 +1,6 @@
 from manim import *
 
-class Overview(Scene):
+class 001_Overview(Scene):
     def construct(self):
         self.wait(3)
         RNN = ImageMobject("source_images/RNN.png").scale(0.4).shift(UP*3)

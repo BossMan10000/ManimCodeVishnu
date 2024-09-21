@@ -1,6 +1,6 @@
 from manim import *
 
-class IntrotoSLSAIntuition(Scene):
+class 401_IntrotoSLSAIntuition(Scene):
     def construct(self):
         Title = Text("Single Layer Self Attention", font_size= 48,gradient = (GRAY,BLUE))
         subtitle = Text("SLSA", font_size = 24,gradient = (GRAY,BLUE)).next_to(Title,DOWN*1)
@@ -52,7 +52,7 @@ class IntrotoSLSAIntuition(Scene):
         self.play(Write(deeper_nuances))
         self.wait(5)
         
-class Sselfattentionscore(Scene):
+class 402_Sselfattentionscore(Scene):
     def construct(self):
         attentionfactors = Text("Query(Q)   Key(K)  Value(V)", font_size = 44)
         
@@ -175,7 +175,7 @@ class Sselfattentionscore(Scene):
 
 
 
-class Example1(Scene):
+class 403_Example1(Scene):
     def construct(self):
         example = Text("The large river bank").to_edge(UP)
 
@@ -271,7 +271,7 @@ class Example1(Scene):
         self.play(GrowArrow(arrowfkteq))
         self.wait(5)
 
-class ValueMatrixAttention(Scene):
+class 404_ValueMatrixAttention(Scene):
     def construct(self):
 
         formula = MathTex(r"\text{Attention}(Q, K, V) = \text{softmax} \left( \frac{QK^T}{\sqrt{d_k}} \right) V")

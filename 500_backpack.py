@@ -1,7 +1,7 @@
 from manim import *
 import random
 
-class Backpack_Model(Scene):
+class 501_Backpack_Model(Scene):
     def construct(self):
         # Reference back to CBoW
         CBoW = Text("CBoW", font_size=50).to_edge(UP)
